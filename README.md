@@ -114,7 +114,7 @@ for (i in 1:4)
 }
 ```
 
-Now we have a list <i>plots</i> containing all 4 histograms and we need to show them in a single plot. First, we need to get a single legend for them (we use g_legend function from https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs). Second, we do the plotting itself:
+Now we have a list <i>plots</i> containing all 4 histograms and we need to show them in a single plot. First, we need to get a single legend for them (we use <i>g_legend</i> function from https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs). Second, we do the plotting itself:
 
 ```
 #build a legend
