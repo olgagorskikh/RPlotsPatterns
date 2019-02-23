@@ -64,14 +64,6 @@ plots <- list()
 names <- c("d=0.1","d=2","d=10", "d=20")
 ditributionNames <-c("normal distribution","student distribution (df=3)")
 xlabTitle <- "Amount of outliers, %"
-
-#make a common legend for several plots
-#https://github.com/hadley/ggplot2/wiki/Share-a-legend-between-two-ggplot2-graphs
-g_legend<-function(a.gplot){
-  tmp <- ggplot_gtable(ggplot_build(a.gplot))
-  leg <- which(sapply(tmp$grobs, function(x) x$name) == "guide-box")
-  legend <- tmp$grobs[[leg]]
-  return(legend)}
 ```
 Then, everything is ready to loop through all 4 magnitudes:
 ```
@@ -137,7 +129,7 @@ finalPlot <- grid.arrange(top="Percentage of all points detected",
                                nrow=1),
                    mylegend, nrow=2,heights=c(10, 1))
 ```
-And here is the desired result:
+And here is the final result:
 
 <p align="center">
   <img src="images/histos.PNG" width="500"/>
